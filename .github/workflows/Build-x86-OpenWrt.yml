@@ -16,6 +16,10 @@ on:
         description: '管理地址IP'
         required: true
         default: '192.168.3.1'    
+    defaultBranch:
+        description: '使用分支'
+        required: true
+        default: 'openwrt-24.10'
     loadApp:
         description: '加载完整插件'
         required: true
@@ -42,7 +46,7 @@ on:
 
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
-  REPO_BRANCH: v23.05.2
+  REPO_BRANCH: ${{ github.event.inputs.defaultBranch }}
   CONFIG_FILE: config/project/${{ github.event.inputs.config }}.config
   DIY_SH: scripts/project-openwrt.sh
   FEEDS_CONF: feeds/offical/feeds.conf.default
