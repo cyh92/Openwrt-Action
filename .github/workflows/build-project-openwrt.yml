@@ -95,7 +95,7 @@ jobs:
     - name: 加载自定义 feeds
       run: |       
        #echo "src-git-full small8 https://github.com/kenzok8/small-package" >> openwrt/feeds.conf.default
-       echo "src-git-full fros https://github.com/destan19/fros-packages-immortalwrt-mt798x.git;fros-21.02" >> openwrt/feeds.conf.default
+       echo "src-git fros https://github.com/destan19/fros-packages-openwrt.git;fros-23.05" >> openwrt/feeds.conf.default
        #echo "src-git cyhpkg https://gitee.com/cyh92/cyhpackage.git" >> openwrt/feeds.conf.default
        #echo 'src-git istore https://github.com/linkease/istore;main' >> openwrt/feeds.conf.default
         cat openwrt/feeds.conf.default
